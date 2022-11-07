@@ -28,22 +28,7 @@
     </head>
     <body>
       <main id="swup">
-        <nav class="wraphovertransform">
-            <a href="/" class="wh">WINGMAN HEALTH</a>
-            <a href="//kel.ch/wm/join" class="hovertransform">
-              <p
-                 data-tilt
-                 data-tilt-max="5"
-                 data-tilt-glare
-                 data-tilt-max-glare="0.8">
-                  BETA
-              </p>
-            </a>
-            <a href="/contact" class="hovertransform">
-              <p data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.8">CONTACT</p></a>
-            <a href="/imprint" class="hovertransform">
-              <p data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.8">IMPRINT</p></a>
-          </nav>
+          {% include nav.html %}
           <div class="swup-content threedmodel" style="overflow-y: scroll">
             {% include terms.html %}
           </div>
