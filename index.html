@@ -28,7 +28,22 @@
        </style>
     </head>
     <body>
-
+      <div class="notification-area">
+        <div id="BetaNotification" class="notification material-glass">
+          <div class="notification-content">
+           <div class="notification-image">
+            <img src="/r/icon/beta.png">
+            </div> 
+            <div class="notification-text">
+              <div class="notification-firstline">
+                <div class="notification-title">Wingman Health</div>
+                <div class="notification-time">now</div>
+              </div>
+              <p>request early access →</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="stage">
         <div class="stage-back bg"></div>
         <div class="stage-left mesh1 noise blur frame">
@@ -36,7 +51,9 @@
             <div class="tagline">Personal Assesments</div>
             <div class="title">Wingman Health</div>
             <div class="subline">A better way to develop your mind.</div>
-            <button class="cta">early access</button>
+            <button 
+            data-tilt data-tilt-max="5" data-tilt-glare data-tilt-perspective="500" data-tilt-max-glare="0.2"
+            class="cta">early access</button>
           </div>
         </div>
         <div class="stage-center-right frame">
@@ -74,11 +91,22 @@
           </div>
       </main> -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+    <script type="text/javascript" src="/script/vanilla-tilt.js"></script>
+    <script>
+      function setTilts(){
+      if (document.querySelector('[data-tilt]')) {
+      let allTilts = document.querySelectorAll("[data-tilt]");
+      VanillaTilt.init(allTilts);
+      };
+    }
+    setTilts();
+    </script>
 <!--     <script src="/script/SwupMetaTagsPlugin.js"></script>
     <script src="/script/SwupPreloadPlugin-1-0-4.js"></script>
     <script src="/script/SwupRouteNamePlugin.js"></script>
     <script src="/script/swup-2-0-17.js"></script>
-    <script src="https://raw.githubusercontent.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.min.js"></script> -->
+    -->
     <!-- <script src="/script/app.js"></script> -->
 
     </body>

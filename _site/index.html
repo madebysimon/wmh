@@ -26,14 +26,59 @@
        </style>
     </head>
     <body>
-      <main id="swup" class="transition-fade">
-        <nav class="wraphovertransform">
-            <a href="" class="wh">WINGMAN HEALTH</a>
-            <a href="//kel.ch/re/hello@wingman" class="hovertransform">
-              <p data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.8">CONTACT</p></a>
-            <a href="/imprint" class="hovertransform">
-              <p data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.8">IMPRINT</p></a>
-          </nav>
+      <div class="notification-area">
+        <div id="BetaNotification" class="notification material-glass">
+          <div class="notification-content">
+           <div class="notification-image">
+            <img src="/r/icon/beta.png">
+            </div> 
+            <div class="notification-text">
+              <div class="notification-firstline">
+                <div class="notification-title">Wingman Health</div>
+                <div class="notification-time">now</div>
+              </div>
+              <p>request early access →</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-back bg"></div>
+        <div class="stage-left mesh1 noise blur frame">
+            <div class="padding flex-column-left">
+            <div class="tagline">Personal Assesments</div>
+            <div class="title">Wingman Health</div>
+            <div class="subline">A better way to develop your mind.</div>
+            <button 
+            data-tilt data-tilt-max="5" data-tilt-glare data-tilt-perspective="500" data-tilt-max-glare="0.2"
+            class="cta">early access</button>
+          </div>
+        </div>
+        <div class="stage-center-right frame">
+          <div class="card frame">
+            <model-viewer class=""
+                    alt="Chrome Plane in Lightbox"
+                    src="//beta.wingmanhealth.io/r/3d/plane.glb"
+                    environment-image="//beta.wingmanhealth.io/r/3d/moon_1k.hdr"
+                    loading="lazy"
+                    shadow-intensity="0"
+                    camera-controls
+                    interaction-prompt="none"
+                    auto-rotate
+                    rotation-per-second="-100%"
+                    touch-action="pan-y">
+            </model-viewer></div>
+        </div>
+      </div>
+      <!-- <main id="swup" class="transition-fade">
+          <nav class="wraphovertransform">
+  <a href="" class="wh">WINGMAN HEALTH</a>
+  <a href="//gate.wingmanhealth.io/hello" class="hovertransform">
+    <p data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.8">CONTACT</p></a>
+  <a href="/imprint" class="hovertransform">
+    <p data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.8">IMPRINT</p></a>
+</nav>
+
           <div class="swup-content threedmodel">
             <model-viewer      
               alt="Chrome Plane in Lightbox"
@@ -49,14 +94,25 @@
               touch-action="pan-y">
             </model-viewer>
           </div>
-      </main>
+      </main> -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script src="/script/SwupMetaTagsPlugin.js"></script>
+  
+    <script type="text/javascript" src="/script/vanilla-tilt.js"></script>
+    <script>
+      function setTilts(){
+      if (document.querySelector('[data-tilt]')) {
+      let allTilts = document.querySelectorAll("[data-tilt]");
+      VanillaTilt.init(allTilts);
+      };
+    }
+    setTilts();
+    </script>
+<!--     <script src="/script/SwupMetaTagsPlugin.js"></script>
     <script src="/script/SwupPreloadPlugin-1-0-4.js"></script>
     <script src="/script/SwupRouteNamePlugin.js"></script>
     <script src="/script/swup-2-0-17.js"></script>
-    <script src="https://raw.githubusercontent.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.min.js"></script>
-    <script src="/script/app.js"></script>
+    -->
+    <!-- <script src="/script/app.js"></script> -->
 
     </body>
 </html>
