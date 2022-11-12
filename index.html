@@ -28,7 +28,34 @@
        </style>
     </head>
     <body>
-      <main id="swup" class="transition-fade">
+
+      <div class="stage">
+        <div class="stage-back bg"></div>
+        <div class="stage-left mesh1 noise blur frame">
+            <div class="padding flex-column-left">
+            <div class="tagline">Personal Assesments</div>
+            <div class="title">Wingman Health</div>
+            <div class="subline">A better way to develop your mind.</div>
+            <button class="cta">early access</button>
+          </div>
+        </div>
+        <div class="stage-center-right frame">
+          <div class="card frame">
+            <model-viewer class=""
+                    alt="Chrome Plane in Lightbox"
+                    src="//beta.wingmanhealth.io/r/3d/plane.glb"
+                    environment-image="//beta.wingmanhealth.io/r/3d/moon_1k.hdr"
+                    loading="lazy"
+                    shadow-intensity="0"
+                    camera-controls
+                    interaction-prompt="none"
+                    auto-rotate
+                    rotation-per-second="-100%"
+                    touch-action="pan-y">
+            </model-viewer></div>
+        </div>
+      </div>
+      <!-- <main id="swup" class="transition-fade">
           {% include nav.html %}
           <div class="swup-content threedmodel">
             <model-viewer      
@@ -45,7 +72,7 @@
               touch-action="pan-y">
             </model-viewer>
           </div>
-      </main>
+      </main> -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <!--     <script src="/script/SwupMetaTagsPlugin.js"></script>
     <script src="/script/SwupPreloadPlugin-1-0-4.js"></script>
