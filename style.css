@@ -317,6 +317,19 @@ button.notification {
   margin: 0;
 }
 
+
+
+.legal {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.legal a {
+  color:rgb(71, 71, 75);
+  text-decoration: none;
+}
+
 /*
 
 .notification-area {
@@ -486,3 +499,4 @@ p {
   height: 100px;
   background-color: green;
 }
+
